@@ -1,4 +1,4 @@
-global class Batch01AccountChiffreAffaire implements Database.Batchable<Account>{
+global class UpdateAccounts implements Database.Batchable<Account>{
     
     global Database.QueryLocator start(Database.BatchableContext info){ 
         //Requêter seulement les comptes qui ont au moins une commande avec le Status 'Ordered'

@@ -1,4 +1,4 @@
-public without sharing class VFC01_Team {
+public without sharing class MyTeamOrdersµController {
     public decimal SumOrders {
         get {
             Decimal totalAmount = 0;

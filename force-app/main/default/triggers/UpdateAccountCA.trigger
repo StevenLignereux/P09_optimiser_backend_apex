@@ -1,12 +1,20 @@
 trigger UpdateAccountCA on Order (after update) {
 	
-    set<Id> setAccountIds = new set<Id>();
+    Set<Id> accountIds = new Set<Id>();
     
-    for(integer i=0; i< trigger.new.size(); i++){
-        Order newOrder= trigger.new[i];
-       
-        Account acc = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id =:newOrder.AccountId ];
-        acc.Chiffre_d_affaire__c = acc.Chiffre_d_affaire__c + newOrder.TotalAmount;
-        update acc;
+    for (Order updatedOrder : Trigger.new) {
+        
+        Order oldOrder = Trigger.oldMap.get(updatedOrder.Id);
+        if (oldOrder.TotalAmount != updatedOrder.TotalAmount) {
+            accountIds.add(updatedOrder.AccountId);
+        }
+    }
+    
+    if (!accountIds.isEmpty()) {
+        List<Account> accountsToUpdate = new List<Account>();
+        for (AggregateResult result : [SELECT AccountId, SUM(TotalAmount) total FROM Order WHERE AccountId IN :accountIds GROUP BY AccountId]) {
+            accountsToUpdate.add(new Account(Id = (Id)result.get('AccountId'), Chiffre_d_affaire__c = (Decimal)result.get('total')));
+        }
+        update accountsToUpdate;
     }
 }
