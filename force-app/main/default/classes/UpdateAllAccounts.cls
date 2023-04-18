@@ -10,15 +10,15 @@ global class UpdateAllAccounts implements Database.Batchable<sObject>{
     }
      
     global void execute(Database.BatchableContext info, List<Account> scope){
+        // Use a set id storage to avoid duplicate id
         Set<Id> setAccountIds = new Set<Id>();
         for (Account acc : scope) {
             setAccountIds.add(acc.Id);
         }
+        // Supress update accounts for call a static method. 
         AP01Account.updateChiffreAffaire(setAccountIds);
     }    
      
-    global void finish(Database.BatchableContext info){     
-        // Aucune action n'est nécessaire à la fin de l'exécution
-    } 
+    
  }
  
