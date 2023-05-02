@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Thu Apr 20 2023 07:26:07",
+    "testExecutionTimeInMs": 391,
+    "testTotalTimeInMs": 391,
+    "commandTimeInMs": 301,
+    "hostname": "https://creative-shark-q0bhjj-dev-ed.trailblaze.my.salesforce.com",
+    "orgId": "00D0900000DxWzYEAV",
+    "username": "slignere@creative-shark-q0bhjj.com",
+    "testRunId": "7070900003V99AL",
+    "userId": "0050900000C5WhcAAF"
+  },
+  "tests": [
+    {
+      "id": "07M09000004bZkEEAU",
+      "queueItemId": "70909000000tqLNAAY",
+      "stackTrace": "Class.AccountServiceTest.test: line 22, column 1",
+      "message": "System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Required fields are missing: [EffectiveDate, Status]: [EffectiveDate, Status]",
+      "asyncApexJobId": "7070900003V99ALAAZ",
+      "methodName": "test",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 391,
+      "testTimestamp": "2023-04-20T05:26:07.000+0000",
+      "fullName": "AccountServiceTest.test",
+      "diagnostic": {
+        "exceptionMessage": "System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Required fields are missing: [EffectiveDate, Status]: [EffectiveDate, Status]",
+        "exceptionStackTrace": "Class.AccountServiceTest.test: line 22, column 1",
+        "className": "AccountServiceTest",
+        "compileProblem": "",
+        "lineNumber": 22,
+        "columnNumber": 1
+      }
+    }
+  ]
+}

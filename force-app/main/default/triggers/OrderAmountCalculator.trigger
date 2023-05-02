@@ -5,4 +5,11 @@ trigger OrderAmountCalculator on Order (before update) {
     for (Order newOrder : Trigger.new) {
         newOrder.NetAmount__c = newOrder.TotalAmount - newOrder.ShipmentCost__c;
     }
+
+    
 }
+
+// utiliser el design pattern trigger handler : avoir un trigger par objet 
+// on fait toutes les actions possibles sur l'objet 
+// nom générique : OrderTrigger 
+// on créer des conditions par exemple if before update et dans ces if on fait appel aux méthodes (déléguer au trigger comme le service).

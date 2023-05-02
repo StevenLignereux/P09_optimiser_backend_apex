@@ -9,7 +9,7 @@ public class AccountService {
             WHERE AccountId = :accountList 
             GROUP BY AccountId
         ]){
-            accountCA.put((Id)order.get('AccountId'), (Decimal)order.get('totalAmount'));
+            accountCA.put((Id)order.get('AccountId'), (Decimal)order.get('TotalAmount'));
         }
         
         // use the map to update the account. If the account is not in the map, the total amount is 0
@@ -21,3 +21,4 @@ public class AccountService {
     }    
 }
 
+// Penser à générer la doc 
