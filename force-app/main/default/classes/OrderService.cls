@@ -3,6 +3,7 @@ public with sharing class OrderService {
         for(Order order : orders){
             order.NetAmount__c = order.TotalAmount - order.ShipmentCost__c;
         }
+        update orders;
     }
 }
 
