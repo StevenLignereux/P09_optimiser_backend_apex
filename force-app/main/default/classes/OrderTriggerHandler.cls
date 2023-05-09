@@ -4,8 +4,8 @@ public without sharing class OrderTriggerHandler {
     }
 
     public void onBeforeUpdate(Map<Id, Order> oldOrders, List<Order> newOrders) {
-        // créer un orderService pour appeler la méthode ici = triggerHandler design pattern
-        orderService.netAmountCalculator(oldOrders, newOrders);
+        
+        OrderService.netAmountCalculator(newOrders);
     }
 
     public void onAfterInsert(List<Order> newOrders) {

@@ -1,3 +1,4 @@
+// A supprimer et à procéder de la même manière que pour l'autre trigger
 trigger UpdateAccountCA on Order (after update) {
 	
     Set<Id> accountIds = new Set<Id>();
