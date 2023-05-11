@@ -1,17 +1,66 @@
 @isTest
 private class AccountServiceTest {
-    @testSetup static void setup() {
-        List<Account> accounts = AccountDataFactory.createAccounts(1);
-        List<Product2> products = AccountDataFactory.createProducts(1);
-        List<PricebookEntry> pricebookEntries = AccountDataFactory.createPricebookEntries(products[0].Id);
-        List<Order> orders = AccountDataFactory.createOrders(accounts[0].Id);
-        List<OrderItem> orderItems = AccountDataFactory.createOrderItems(orders[0].Id, pricebookEntries[0].Id, new decimal[]{10, 20}, new decimal[]{150, 1000});
-    }
-    @isTest static void test() {
+    @isTest
+    static void testUpdateAllCAWithOrders() {
+        List<Account> accountList = TestDataFactory.createAccounts(2);
+        List<Order> orders = TestDataFactory.createOrdersForAccounts(accountList, 2, 10, 1);
         
+        Test.startTest();
+        AccountService.updateAllCA(orders);
+        Test.stopTest();
+        
+        // Vérification que les chiffres d'affaires des comptes sont mis à jour correctement
+        accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
+        for (Account account : accountList) {
+            System.assertEquals(20.0, account.Chiffre_d_affaire__c);
+        }
     }
-
-    // On test les scénarios négatifs et positif (par exemple tester le Ca avec et sans valeur)
+    
+    @isTest
+    static void testUpdateAllCAWithEmptyOrderList() {
+        List<Account> accountList = TestDataFactory.createAccounts(2);
+        
+        Test.startTest();
+        AccountService.updateAllCA(new List<Order>());
+        Test.stopTest();
+        
+        // Vérification que les chiffres d'affaires des comptes sont mis à 0 si il n'y a pas de commande
+        accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
+        for (Account account : accountList) {
+            System.assertEquals(0, account.Chiffre_d_affaire__c);
+        }
+    }
+    
+    @isTest
+    static void testUpdateAllCAWithAccounts() {
+        List<Account> accountList = TestDataFactory.createAccounts(2);
+        List<Order> orders = TestDataFactory.createOrdersForAccounts(accountList, 2, 10, 1);
+        
+        Test.startTest();
+        AccountService.updateAllCA(accountList);
+        Test.stopTest();
+        
+        // Vérification que les chiffres d'affaires des comptes sont mis à jour correctement
+        accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
+        for (Account account : accountList) {
+            System.assertEquals(20.0, account.Chiffre_d_affaire__c);
+        }
+    }
+    
+    @isTest
+    static void testUpdateAllCAWithEmptyAccountList() {
+        List<Account> accountList = TestDataFactory.createAccounts(2);
+        
+        Test.startTest();
+        AccountService.updateAllCA(new List<Account>());
+        Test.stopTest();
+        
+        // Vérification que les chiffres d'affaires des comptes sont mis à 0 si il n'y a pas d'enregistrement de compte
+        accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
+        for (Account account : accountList) {
+            System.assertEquals(0, account.Chiffre_d_affaire__c);
+        }
+    }
 }
 
 
