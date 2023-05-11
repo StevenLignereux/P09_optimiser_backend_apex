@@ -4,7 +4,6 @@ public without sharing class OrderTriggerHandler {
     }
 
     public void onBeforeUpdate(Map<Id, Order> oldOrders, List<Order> newOrders) {
-        
         OrderService.netAmountCalculator(newOrders);
     }
 
@@ -13,8 +12,7 @@ public without sharing class OrderTriggerHandler {
     }
 
     public void onAfterUpdate(Map<Id, Order> oldOrders, List<Order> newOrders) {
-        // créer un orderService pour appeler la méthode ici = triggerHandler design pattern
-        // utiliser le accountService 
+        AccountService.updateAllCA(newOrders);
     }
 
     public void onAfterDelete(Map<Id, Order> oldOrders) {
@@ -30,5 +28,3 @@ public without sharing class OrderTriggerHandler {
     }
 }
 
-// Utiliser les agregate : AggregateResult groupedResults = [SELECT SUM(TotalAmount) total FROM Order WHERE Status = 'Ordered']
-// On y accède comme cici : groupedResults.get('total');

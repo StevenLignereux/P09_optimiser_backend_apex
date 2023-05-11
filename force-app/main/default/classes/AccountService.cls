@@ -18,7 +18,27 @@ public class AccountService {
         }
         
         update accountList;
-    }    
+    }
+
+
+    public static void updateAllCA(List<Order> ordersToUpdate) {
+        // Création d'un set contenant les IDs des comptes à mettre à jour
+        Set<Id> accountIds = new Set<Id>();
+        
+        // Ajout des IDs de compte pour tous les ordres à mettre à jour
+        for (Order updatedOrder : ordersToUpdate) {
+            accountIds.add(updatedOrder.AccountId);
+        }
+        
+        // Récupération des totaux de commandes par compte
+        List<Account> accountsToUpdate = new List<Account>();
+        for (AggregateResult result : [SELECT AccountId, SUM(TotalAmount) total FROM Order WHERE AccountId IN :accountIds GROUP BY AccountId]) {
+            accountsToUpdate.add(new Account(Id = (Id)result.get('AccountId'), Chiffre_d_affaire__c = (Decimal)result.get('total')));
+        }
+        
+        // Mise à jour des enregistrements de compte
+        update accountsToUpdate;
+    }
 }
 
 // Penser à générer la doc 
