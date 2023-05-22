@@ -12,7 +12,7 @@ private class AccountServiceTest {
         // Vérification que les chiffres d'affaires des comptes sont mis à jour correctement
         accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
         for (Account account : accountList) {
-            System.assertEquals(20.0, account.Chiffre_d_affaire__c);
+            Assert.areEqual(20, account.Chiffre_d_affaire__c);
         }
     }
     
@@ -27,7 +27,7 @@ private class AccountServiceTest {
         // Vérification que les chiffres d'affaires des comptes sont mis à 0 si il n'y a pas de commande
         accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
         for (Account account : accountList) {
-            System.assertEquals(0, account.Chiffre_d_affaire__c);
+            Assert.areEqual(0, account.Chiffre_d_affaire__c);
         }
     }
     
@@ -43,7 +43,7 @@ private class AccountServiceTest {
         // Vérification que les chiffres d'affaires des comptes sont mis à jour correctement
         accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
         for (Account account : accountList) {
-            System.assertEquals(20.0, account.Chiffre_d_affaire__c);
+            Assert.areEqual(20, account.Chiffre_d_affaire__c);
         }
     }
     
@@ -58,7 +58,7 @@ private class AccountServiceTest {
         // Vérification que les chiffres d'affaires des comptes sont mis à 0 si il n'y a pas d'enregistrement de compte
         accountList = [SELECT Id, Chiffre_d_affaire__c FROM Account WHERE Id IN :accountList];
         for (Account account : accountList) {
-            System.assertEquals(0, account.Chiffre_d_affaire__c);
+            Assert.areEqual(0, account.Chiffre_d_affaire__c);
         }
     }
 }

@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 4,
+    "passing": 2,
+    "failing": 2,
+    "skipped": 0,
+    "passRate": "50%",
+    "failRate": "50%",
+    "skipRate": "0%",
+    "testStartTime": "Tue May 16 2023 08:25:38",
+    "testExecutionTimeInMs": 2205,
+    "testTotalTimeInMs": 2205,
+    "commandTimeInMs": 315,
+    "hostname": "https://creative-shark-q0bhjj-dev-ed.trailblaze.my.salesforce.com",
+    "orgId": "00D0900000DxWzYEAV",
+    "username": "slignere@creative-shark-q0bhjj.com",
+    "testRunId": "7070900003cHQ1V",
+    "userId": "0050900000C5WhcAAF"
+  },
+  "tests": [
+    {
+      "id": "07M09000004btApEAI",
+      "queueItemId": "70909000000tqxKAAQ",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900003cHQ1VAAW",
+      "methodName": "testUpdateAllCAWithAccounts",
+      "outcome": "Pass",
+      "apexLogId": "07L0900000CdUUKEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 822,
+      "testTimestamp": "2023-05-16T06:25:38.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithAccounts"
+    },
+    {
+      "id": "07M09000004btAqEAI",
+      "queueItemId": "70909000000tqxKAAQ",
+      "stackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyAccountList: line 61, column 1",
+      "message": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+      "asyncApexJobId": "7070900003cHQ1VAAW",
+      "methodName": "testUpdateAllCAWithEmptyAccountList",
+      "outcome": "Fail",
+      "apexLogId": "07L0900000CdUUKEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 65,
+      "testTimestamp": "2023-05-16T06:25:39.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithEmptyAccountList",
+      "diagnostic": {
+        "exceptionMessage": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+        "exceptionStackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyAccountList: line 61, column 1",
+        "className": "AccountServiceTest",
+        "compileProblem": "",
+        "lineNumber": 61,
+        "columnNumber": 1
+      }
+    },
+    {
+      "id": "07M09000004btArEAI",
+      "queueItemId": "70909000000tqxKAAQ",
+      "stackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyOrderList: line 30, column 1",
+      "message": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+      "asyncApexJobId": "7070900003cHQ1VAAW",
+      "methodName": "testUpdateAllCAWithEmptyOrderList",
+      "outcome": "Fail",
+      "apexLogId": "07L0900000CdUUKEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 243,
+      "testTimestamp": "2023-05-16T06:25:39.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithEmptyOrderList",
+      "diagnostic": {
+        "exceptionMessage": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+        "exceptionStackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyOrderList: line 30, column 1",
+        "className": "AccountServiceTest",
+        "compileProblem": "",
+        "lineNumber": 30,
+        "columnNumber": 1
+      }
+    },
+    {
+      "id": "07M09000004btAsEAI",
+      "queueItemId": "70909000000tqxKAAQ",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900003cHQ1VAAW",
+      "methodName": "testUpdateAllCAWithOrders",
+      "outcome": "Pass",
+      "apexLogId": "07L0900000CdUUKEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 1075,
+      "testTimestamp": "2023-05-16T06:25:40.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithOrders"
+    }
+  ]
+}

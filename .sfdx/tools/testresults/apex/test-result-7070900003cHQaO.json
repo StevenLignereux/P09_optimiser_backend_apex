@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 4,
+    "passing": 4,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "100%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Tue May 16 2023 08:29:33",
+    "testExecutionTimeInMs": 2048,
+    "testTotalTimeInMs": 2048,
+    "commandTimeInMs": 232,
+    "hostname": "https://creative-shark-q0bhjj-dev-ed.trailblaze.my.salesforce.com",
+    "orgId": "00D0900000DxWzYEAV",
+    "username": "slignere@creative-shark-q0bhjj.com",
+    "testRunId": "7070900003cHQaO",
+    "userId": "0050900000C5WhcAAF"
+  },
+  "tests": [
+    {
+      "id": "07M09000004btAuEAI",
+      "queueItemId": "70909000000tqxPAAQ",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900003cHQaOAAW",
+      "methodName": "testUpdateAllCAWithAccounts",
+      "outcome": "Pass",
+      "apexLogId": "07L0900000CdUVMEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 1016,
+      "testTimestamp": "2023-05-16T06:29:34.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithAccounts"
+    },
+    {
+      "id": "07M09000004btAvEAI",
+      "queueItemId": "70909000000tqxPAAQ",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900003cHQaOAAW",
+      "methodName": "testUpdateAllCAWithEmptyAccountList",
+      "outcome": "Pass",
+      "apexLogId": "07L0900000CdUVMEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 55,
+      "testTimestamp": "2023-05-16T06:29:35.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithEmptyAccountList"
+    },
+    {
+      "id": "07M09000004btAwEAI",
+      "queueItemId": "70909000000tqxPAAQ",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900003cHQaOAAW",
+      "methodName": "testUpdateAllCAWithEmptyOrderList",
+      "outcome": "Pass",
+      "apexLogId": "07L0900000CdUVMEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 229,
+      "testTimestamp": "2023-05-16T06:29:35.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithEmptyOrderList"
+    },
+    {
+      "id": "07M09000004btAxEAI",
+      "queueItemId": "70909000000tqxPAAQ",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900003cHQaOAAW",
+      "methodName": "testUpdateAllCAWithOrders",
+      "outcome": "Pass",
+      "apexLogId": "07L0900000CdUVMEA3",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 748,
+      "testTimestamp": "2023-05-16T06:29:35.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithOrders"
+    }
+  ]
+}

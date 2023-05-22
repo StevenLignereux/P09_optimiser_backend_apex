@@ -9,10 +9,11 @@ public class TestDataFactory {
         return accountsToCreate;
     }
     
+    
     public static List<Order> createOrdersForAccounts(List<Account> accounts, Integer numOrders, Integer unitPrice, Integer quantity) {
         List<Order> ordersToCreate = new List<Order>();
         List<OrderItem> orderItemsToCreate = new List<OrderItem>();
-        Pricebook2 standardPricebook = [SELECT Id FROM Pricebook2 WHERE IsStandard = true LIMIT 1];
+        Id standardPricebookId = Test.getStandardPricebookId();
 
         for (Account account : accounts) {
             Contract contract = new Contract(
@@ -28,21 +29,28 @@ public class TestDataFactory {
                     ContractId=contract.Id,
                     Status='Draft',
                     EffectiveDate=Date.today(),
-                    Pricebook2Id=standardPricebook.Id
+                    Pricebook2Id=standardPricebookId
                 );
                 ordersToCreate.add(order);
-
-                OrderItem orderItem = new OrderItem (
-                    OrderId=order.Id,
-                    PricebookEntryId=createPricebookEntries(unitPrice).get(0).Id,
-                    Quantity=quantity,
-                    UnitPrice=unitPrice
-                );
-                orderItemsToCreate.add(orderItem);
             }
         }
+
+        
+
         Database.insert(ordersToCreate);
+
+        for (Order order : ordersToCreate) {
+            OrderItem orderItem = new OrderItem (
+                OrderId=order.Id,
+                PricebookEntryId=createPricebookEntries(unitPrice).get(0).Id,
+                Quantity=quantity,
+                UnitPrice=unitPrice
+            );
+            orderItemsToCreate.add(orderItem);
+        }
+
         Database.insert(orderItemsToCreate);
+
         return ordersToCreate;
     }
 

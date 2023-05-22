@@ -17,3 +17,5 @@ global class UpdateAllAccountsBatch extends Database.Batchable<sObject> {
         
     } 
 }
+
+// A tester 

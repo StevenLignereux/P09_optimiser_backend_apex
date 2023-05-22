@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Tue May 16 2023 07:55:59",
+    "testExecutionTimeInMs": 116,
+    "testTotalTimeInMs": 116,
+    "commandTimeInMs": 217,
+    "hostname": "https://creative-shark-q0bhjj-dev-ed.trailblaze.my.salesforce.com",
+    "orgId": "00D0900000DxWzYEAV",
+    "username": "slignere@creative-shark-q0bhjj.com",
+    "testRunId": "7070900003cHPfe",
+    "userId": "0050900000C5WhcAAF"
+  },
+  "tests": [
+    {
+      "id": "07M09000004btA6EAI",
+      "queueItemId": "70909000000tqwvAAA",
+      "stackTrace": "Class.TestDataFactory.createOrdersForAccounts: line 15, column 1\nClass.AccountServiceTest.testUpdateAllCAWithOrders: line 6, column 1",
+      "message": "System.QueryException: List has no rows for assignment to SObject",
+      "asyncApexJobId": "7070900003cHPfeAAG",
+      "methodName": "testUpdateAllCAWithOrders",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 116,
+      "testTimestamp": "2023-05-16T05:55:59.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithOrders",
+      "diagnostic": {
+        "exceptionMessage": "System.QueryException: List has no rows for assignment to SObject",
+        "exceptionStackTrace": "Class.TestDataFactory.createOrdersForAccounts: line 15, column 1\nClass.AccountServiceTest.testUpdateAllCAWithOrders: line 6, column 1",
+        "className": "TestDataFactory",
+        "compileProblem": "",
+        "lineNumber": 15,
+        "columnNumber": 1
+      }
+    }
+  ]
+}

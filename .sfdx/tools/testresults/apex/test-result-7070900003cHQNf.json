@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 4,
+    "passing": 0,
+    "failing": 4,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Tue May 16 2023 08:12:57",
+    "testExecutionTimeInMs": 2018,
+    "testTotalTimeInMs": 2018,
+    "commandTimeInMs": 381,
+    "hostname": "https://creative-shark-q0bhjj-dev-ed.trailblaze.my.salesforce.com",
+    "orgId": "00D0900000DxWzYEAV",
+    "username": "slignere@creative-shark-q0bhjj.com",
+    "testRunId": "7070900003cHQNf",
+    "userId": "0050900000C5WhcAAF"
+  },
+  "tests": [
+    {
+      "id": "07M09000004btAQEAY",
+      "queueItemId": "70909000000tqxAAAQ",
+      "stackTrace": "Class.TestDataFactory.createOrdersForAccounts: line 46, column 1\nClass.AccountServiceTest.testUpdateAllCAWithAccounts: line 37, column 1",
+      "message": "System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Missing value for required field(s): Order: []",
+      "asyncApexJobId": "7070900003cHQNfAAO",
+      "methodName": "testUpdateAllCAWithAccounts",
+      "outcome": "Fail",
+      "apexLogId": "07L0900000CdUUnEAN",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 711,
+      "testTimestamp": "2023-05-16T06:12:57.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithAccounts",
+      "diagnostic": {
+        "exceptionMessage": "System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Missing value for required field(s): Order: []",
+        "exceptionStackTrace": "Class.TestDataFactory.createOrdersForAccounts: line 46, column 1\nClass.AccountServiceTest.testUpdateAllCAWithAccounts: line 37, column 1",
+        "className": "TestDataFactory",
+        "compileProblem": "",
+        "lineNumber": 46,
+        "columnNumber": 1
+      }
+    },
+    {
+      "id": "07M09000004btAREAY",
+      "queueItemId": "70909000000tqxAAAQ",
+      "stackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyAccountList: line 61, column 1",
+      "message": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+      "asyncApexJobId": "7070900003cHQNfAAO",
+      "methodName": "testUpdateAllCAWithEmptyAccountList",
+      "outcome": "Fail",
+      "apexLogId": "07L0900000CdUUnEAN",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 67,
+      "testTimestamp": "2023-05-16T06:12:58.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithEmptyAccountList",
+      "diagnostic": {
+        "exceptionMessage": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+        "exceptionStackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyAccountList: line 61, column 1",
+        "className": "AccountServiceTest",
+        "compileProblem": "",
+        "lineNumber": 61,
+        "columnNumber": 1
+      }
+    },
+    {
+      "id": "07M09000004btASEAY",
+      "queueItemId": "70909000000tqxAAAQ",
+      "stackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyOrderList: line 30, column 1",
+      "message": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+      "asyncApexJobId": "7070900003cHQNfAAO",
+      "methodName": "testUpdateAllCAWithEmptyOrderList",
+      "outcome": "Fail",
+      "apexLogId": "07L0900000CdUUnEAN",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 279,
+      "testTimestamp": "2023-05-16T06:12:58.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithEmptyOrderList",
+      "diagnostic": {
+        "exceptionMessage": "System.AssertException: Assertion Failed: Expected: 0, Actual: null",
+        "exceptionStackTrace": "(System Code)\nClass.AccountServiceTest.testUpdateAllCAWithEmptyOrderList: line 30, column 1",
+        "className": "AccountServiceTest",
+        "compileProblem": "",
+        "lineNumber": 30,
+        "columnNumber": 1
+      }
+    },
+    {
+      "id": "07M09000004btATEAY",
+      "queueItemId": "70909000000tqxAAAQ",
+      "stackTrace": "Class.TestDataFactory.createOrdersForAccounts: line 46, column 1\nClass.AccountServiceTest.testUpdateAllCAWithOrders: line 6, column 1",
+      "message": "System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Missing value for required field(s): Order: []",
+      "asyncApexJobId": "7070900003cHQNfAAO",
+      "methodName": "testUpdateAllCAWithOrders",
+      "outcome": "Fail",
+      "apexLogId": "07L0900000CdUUnEAN",
+      "apexClass": {
+        "id": "01p0900000TYJsEAAX",
+        "name": "AccountServiceTest",
+        "namespacePrefix": null,
+        "fullName": "AccountServiceTest"
+      },
+      "runTime": 961,
+      "testTimestamp": "2023-05-16T06:12:59.000+0000",
+      "fullName": "AccountServiceTest.testUpdateAllCAWithOrders",
+      "diagnostic": {
+        "exceptionMessage": "System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Missing value for required field(s): Order: []",
+        "exceptionStackTrace": "Class.TestDataFactory.createOrdersForAccounts: line 46, column 1\nClass.AccountServiceTest.testUpdateAllCAWithOrders: line 6, column 1",
+        "className": "TestDataFactory",
+        "compileProblem": "",
+        "lineNumber": 46,
+        "columnNumber": 1
+      }
+    }
+  ]
+}
