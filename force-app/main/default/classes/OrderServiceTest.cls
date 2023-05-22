@@ -16,7 +16,7 @@ private class OrderServiceTest {
         // Check that the net amount was calculated correctly
         List<Order> updatedOrders = [SELECT Id, NetAmount__c FROM Order WHERE Id IN :orders];
         for (Order order : updatedOrders) {
-            System.assertEquals(order.NetAmount__c, order.TotalAmount - order.ShipmentCost__c);
+            Assert.areEqual(order.NetAmount__c, order.TotalAmount - order.ShipmentCost__c);
         }
     }
 
@@ -36,7 +36,7 @@ private class OrderServiceTest {
         // Check that the net amount was calculated correctly
         List<Order> updatedOrders = [SELECT Id, NetAmount__c FROM Order WHERE Id IN :orders];
         for (Order order : updatedOrders) {
-            System.assertEquals(order.NetAmount__c, order.TotalAmount);
+            Assert.areEqual(order.NetAmount__c, order.TotalAmount);
         }
     }
 
@@ -56,7 +56,7 @@ private class OrderServiceTest {
         // Check that the net amount was calculated correctly
         List<Order> updatedOrders = [SELECT Id, NetAmount__c FROM Order WHERE Id IN :orders];
         for (Order order : updatedOrders) {
-            System.assertEquals(order.NetAmount__c, order.TotalAmount + order.ShipmentCost__c);
+            Assert.areEqual(order.NetAmount__c, order.TotalAmount + order.ShipmentCost__c);
         }
     }
 }

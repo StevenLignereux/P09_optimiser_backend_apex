@@ -16,7 +16,7 @@ private class MyTeamOrdersControllerTest {
         Decimal total = controller.SumOrders;
 
         // Check that the total is correct
-        System.assertEquals(350, total);
+        Assert.areEqual(350, total);
     }
 
     @isTest
@@ -34,7 +34,7 @@ private class MyTeamOrdersControllerTest {
         Decimal total = controller.SumOrders;
 
         // Check that the total is correct (should be 0)
-        System.assertEquals(0, total);
+        Assert.areEqual(0, total);
     }
 
     @isTest
@@ -47,7 +47,7 @@ private class MyTeamOrdersControllerTest {
         Test.stopTest();
 
         // Check that the total is 0 and that the exception was handled gracefully
-        System.assertEquals(0, total);
+        Assert.areEqual(0, total);
         // You could also check that the exception was logged or a custom exception was thrown,
         // depending on how you implemented the error handling in the code.
     }
